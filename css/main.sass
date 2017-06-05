@@ -1,0 +1,349 @@
+
+
+$darkColor: #010712
+$lightColor: #F2F2F2
+$pink: #1C1F26
+$yellow: #F2E85C
+
+//$darkColor: #000000
+//$lightColor: #ffffff
+//$pink: #51007A
+//$yellow: #dbe800
+
+html
+  box-sizing: border-box
+body
+    font:
+            family: 'Rubik', sans-serif
+    height: 100%
+    text-transform: uppercase
+*, *:before, *:after
+    box-sizing: inherit
+.container .row *, .container .row *:before, .container .row *:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+a
+    text-decoration: none
+    &:hover
+        text-decoration: none
+.navbar-nav
+    margin: 0px -15px
+
+// Features
+
+#navMenu
+    position: relative
+    background-color: $pink
+    [class^="col-"]
+        padding-right: 0px
+        padding-left: 0px
+    .navbar-header
+        padding: 5px 0px
+        .navbar-toggle
+            background-color: $lightColor
+            border-radius: 0px
+            border: none
+            .icon-bar
+                @extend %transition
+                background-color: $pink
+                &:nth-child(3)
+                    width: 17px
+                &:nth-child(4)
+                    width: 10px
+            &:hover .icon-bar
+                width: 22px
+
+
+    .navbar-brand
+        font:
+            size: 2em
+            weight: 700
+        color: $lightColor
+        span
+            font-weight: 400
+
+    #navContent
+        ul.nav
+
+            > li
+                &:hover
+                    background-color: $darkColor
+
+                > a
+                    letter-spacing: 2px
+                    font-size: 14px
+                    padding: 20px 30px
+                    @extend %transition
+                    color: $lightColor
+
+
+        .dropdown
+            position: static
+            .dropdown-menu
+                right: 0
+                left: 0
+                padding: 0
+                background-color: $darkColor
+                border: none
+                border-radius: 0
+                li
+                    padding: 10px 20px
+                    font-size: 1em
+                    line-height: 1
+                    letter-spacing: 2px
+                    cursor: pointer
+                    &:hover
+                        background-color: $yellow
+                        color: $darkColor
+                        a
+                            color: $darkColor
+                    a
+                        color: $lightColor
+
+
+ul.nav li.dropdown:hover > ul.dropdown-menu
+    display: block
+
+.col-xs-5ths,
+.col-sm-5ths,
+.col-md-5ths,
+.col-lg-5ths
+    position: relative
+    min-height: 1px
+
+
+
+.col-xs-5ths
+    width: 20%
+    float: left
+
+
+@media (min-width: 768px)
+    .col-sm-5ths
+        width: 20%
+        float: left
+
+
+
+@media (min-width: 992px)
+    .col-md-5ths
+        width: 20%
+        float: left
+
+
+
+@media (min-width: 1200px)
+    .col-lg-5ths
+        width: 20%
+        float: left
+
+
+@media (max-width: 840px)
+    #navMenu
+        #navContent
+            .dropdown
+                position: relative
+            .dropdown-menu
+                position: relative
+                display: block
+    [class^="col-"]
+        padding-left: 15px
+        padding-right: 15px
+    .navbar-header
+        float: none
+
+    .navbar-left,.navbar-right
+        float: none !important
+
+    .navbar-toggle
+        display: block
+
+    .navbar-collapse
+        border-top: 1px solid transparent
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1)
+
+    .navbar-fixed-top
+        top: 0
+        border-width: 0 0 1px
+
+    .navbar-collapse.collapse
+        display: none!important
+
+    .navbar-nav
+        float: none!important
+        margin-top: 0px
+
+        max-height: 300px
+        overflow-y: scroll!important
+
+    .navbar-nav>li
+        float: none
+        ul
+            float: none
+        i
+            display: none
+
+
+    .navbar-nav>li>a
+        padding-top: 10px
+        padding-bottom: 10px
+
+    .collapse.in
+        display:block !important
+
+
+%transition
+    transition: all 0.33s ease
+
+
+.round-btn
+    background-color: $lightColor
+    display: inline-block
+    color: $darkColor
+    padding: 10px 15px
+    max-width: 180px
+    font-size: 14px
+    margin: 5px 0px
+    cursor: pointer
+    letter-spacing: 1px
+    @extend %transition
+    &::after
+        content: '\f178'
+        font-family: 'FontAwesome'
+        font-size: 14px
+        position: relative
+        left: 3px
+    &:hover
+        background-color: $darkColor
+        color: $lightColor
+    &.yellow-btn
+        background-color: $yellow
+        max-width: 220px
+        &:hover
+            background-color: $darkColor
+            color: $yellow
+span.brand
+    font-weight: 700
+    span
+        font-weight: 400
+
+// hero
+.hero
+    position: relative
+    padding: 0
+    margin: 0
+    background-color: $darkColor
+    padding: 30px 0px
+    letter-spacing: 2px
+    overflow: hidden
+    .hero-bg
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-color: $pink
+        opacity: 0.9
+        z-index: 0
+    .container
+        padding: 40px 15px
+        z-index: 1
+        position: relative
+    .video-container
+        z-index: -1
+        video
+            position: absolute
+            top: -700px
+            object-fit: contain
+
+    h1
+        margin-top: 56px
+        text-align: right
+        color: $lightColor
+    img
+        margin: 0 auto
+        max-width: 370px
+    .hero-buttons
+        float: right
+        margin-top: 40px
+
+@media screen and (max-width: 992px)
+    .hero
+        padding: 0px
+        h1
+            text-align: center
+        img
+            margin: 20px auto 0px auto
+            max-width: 300px
+
+
+// wrapper
+
+.wrapper
+    .container-fluid
+        padding: 0px
+    [class^='col-']
+        padding: 5px 0px
+        position: relative
+        height: 300px
+
+        .block-title
+            color: $lightColor
+            letter-spacing: 2px
+            h3
+                max-width: 75%
+                padding-left: 40px
+        .round-btn
+            position: absolute
+            right: 20%
+            bottom: 10%
+        &:nth-child(n)
+            z-index: 1
+            cursor: pointer
+            &::after
+                content: ''
+                position: absolute
+                left: 0
+                top: 0
+                bottom: 0
+                right: 0
+                width: 100%
+                filter: brightness(50%)
+                @extend %transition
+                z-index: -1
+            &:hover::after
+                filter: brightness(100%)
+        &:nth-child(1)
+            &::after
+                background-color: #ffffff
+                background-image: url("../assets/images/wrapper1.jpg")
+                background-size: cover
+
+        &:nth-child(2)
+            background: $yellow
+            &::after
+                background-color: #ffffff
+                background-image: url("../assets/images/wrapper2.png")
+                background-size: cover
+
+        &:nth-child(3)
+            background: $yellow
+            &::after
+                background-color: #ffffff
+                background-image: url("../assets/images/wrapper3.jpg")
+                background-size: cover
+
+        &:nth-child(4)
+            h3
+                color: $darkColor
+            &::after
+                background-color: #ffffff
+                background-image: url("https://www.transparenttextures.com/patterns/arches.png")
+                filter: brightness(95%)
+        &:nth-child(5)
+            background: $yellow
+            &::after
+                background-color: #ffffff
+                background-image: url("../assets/images/wrapper5.jpg")
+                background-size: cover
