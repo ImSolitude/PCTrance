@@ -411,6 +411,12 @@ span.brand span {
   filter: brightness(95%);
 }
 
+@media screen and (max-width: 992px) {
+  .wrapper [class^='col-']:nth-child(4) h3 {
+    padding-left: 15px !important;
+  }
+}
+
 .wrapper [class^='col-']:nth-child(5) {
   background: #F2E85C;
 }
