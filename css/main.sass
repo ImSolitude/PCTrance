@@ -1,10 +1,10 @@
-
+@import "animation"
 
 $darkColor: #010712
 $lightColor: #F2F2F2
 $pink: #1C1F26
 $yellow: #F2E85C
-
+$blue: #00AFB5
 //$darkColor: #000000
 //$lightColor: #ffffff
 //$pink: #51007A
@@ -350,3 +350,271 @@ span.brand
                 background-color: #ffffff
                 background-image: url("../assets/images/wrapper5.jpg")
                 background-size: cover
+
+
+
+// clients
+.clients
+    position: relative
+    background: $darkColor
+    z-index: 0
+    #clients
+        padding: 10px 0px 0px 0px
+        margin: 0px
+        z-index: 9999
+        .round-btn
+            position: relative
+            max-width: 400px
+            margin: 25px 0px 15px 0px
+            background: $lightColor
+            &:hover
+                color: $darkColor
+
+
+            &::after
+                content: ''
+                width: 100%
+                height: 100%
+                background-color: $blue
+                position: absolute
+                left: -2px
+                top: 2px
+                z-index: -1
+.clients-belt
+    width: 100%
+    position: relative
+    margin-top: -20px
+    padding-bottom: 10px
+    .client-unit
+        max-width: 750px
+        margin: 50px auto 0px auto
+        position: relative
+        display: none
+        z-index: 1
+        &.active-client
+            display: flex
+            @extend %animation-target
+
+        .client-face
+            min-width: 300px
+            text-align: center
+            img
+                max-width: 100px
+                border-radius: 50%
+            .client-name
+                display: block
+                text-transform: uppercase
+                font-weight: 400
+                letter-spacing: 1px
+                margin-top: 5px
+                margin-bottom: -5px
+                color: $lightColor
+            .client-title
+                font-style: normal
+                font-size: 12px
+                color: $lightColor
+        .client-content
+            position: relative
+            font-size: 14px
+            line-height: 30px
+            font-weight: 300
+            margin-top: 10px
+            letter-spacing: 2px
+            p
+                color: $lightColor
+
+.client-quote-mark
+    font-size: 40px
+    color: $lightColor
+    position: absolute
+    top: -10px
+    left: -10px
+    width: 60px
+    height: 60px
+    opacity: 0.1
+    z-index: -1
+
+.client-controls
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: 2
+    > div
+        width: 40px
+        height: 40px
+        margin-top: -20px
+        cursor: pointer
+        @extend %transition
+    i
+        color: $lightColor
+    .next
+        position: absolute
+        top: 50%
+        right: 10px
+        &:hover
+            i
+                color: $blue
+
+    .prev
+        position: absolute
+        top: 50%
+        left: 10px
+        &:hover
+            i
+                color: $blue
+
+
+.clients-mobile-nav
+    text-align: center
+    display: none
+    margin-top: 20px
+    span
+        cursor: pointer
+        display: inline-block
+        width: 16px
+        height: 16px
+        border-radius: 50%
+        border: 2px solid $blue
+        margin: 0px 10px
+        &.active-client
+            border-color: $yellow
+
+
+.clients-logos
+    position: relative
+    max-width: 750px
+    margin: 50px auto 0px
+    display: flex
+    align-items: space-around
+    justify-content: center
+    z-index: 3
+    padding-bottom: 30px
+
+
+
+
+    .client-logo
+        height: 80px
+        min-width: 200px
+        background:
+            size: contain
+            position: center
+            repeat: no-repeat
+        cursor: pointer
+        margin: 0 20px
+        border-bottom: 4px solid transparent
+        opacity: 0.5
+        @extend %transition
+        &.active-client
+            border-bottom: 4px solid $blue
+            opacity: 1
+
+
+@media (max-width: 840px)
+    .client-controls
+        display: none
+    .clients-belt
+        .client-unit.active-client
+            display: block
+            position: relative
+            margin-left: 0px
+            left: auto
+            .client-face
+                margin-bottom: 20px
+            .client-content
+                padding: 0px 10px 0px 50px
+                max-width: 400px
+                margin: 0px auto
+            .client-quote-mark
+                left: 45px
+    .client-logo
+        display: none
+    .clients-mobile-nav
+        display: block
+    .clients-logos
+        margin: 0px
+        padding: 0px
+
+// <-- clients
+
+
+//about
+
+.about
+    position: relative
+    padding: 50px 0px
+    background-color: $lightColor
+    overflow: hidden
+    z-index: 1
+
+    .right-img
+        position: absolute
+        top: -5%
+        left: 60%
+        right: 0px
+        bottom: 0
+        z-index: 1
+        max-height: 860px
+    .content
+        text-transform: none
+        color: $darkColor
+        h2
+            width: 80%
+            font-family: 'Montserrat', sans-serif
+            font-size: 30px
+            font-weight: 700
+        p
+            line-height: 28px
+            font-size: 16px
+            margin-top: 16px
+    .charts
+        padding-top: 20px
+        .icon
+            margin-bottom: 36px
+            .icon-title
+                line-height: 36px
+                color: $blue
+                font-size: 32px
+                letter-spacing: 5px
+                font-weight: 500
+            .icon-text
+                letter-spacing: 1px
+                font-size: 15px
+                font-weight: 400
+
+    .big-text-row
+        .big-letters
+            font-size: 25px
+            margin: 20px 0 0 20px
+            p
+                padding-top: 17px
+            span
+                font-family: 'Montserrat', sans-serif
+                margin-right: 10px
+                font-weight: 700
+                font-size: 240px
+                line-height: 240px
+                float: left
+
+@media screen and (max-width: 768px)
+    .icon
+        float: left
+        margin: 10px 30px
+    .about
+        .big-text-row
+            .big-letters
+                span
+                    font-size: 90px!important
+                    line-height: 120px!important
+
+@media screen and (max-width: 992px)
+    .about
+        .big-text-row
+            .big-letters
+                span
+                    font-size: 145px
+                    line-height: 145px
+                p
+                    font-size: 20px
