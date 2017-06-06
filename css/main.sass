@@ -1,3 +1,4 @@
+
 @import "animation"
 
 $darkColor: #010712
@@ -337,6 +338,7 @@ span.brand
         &:nth-child(4)
             h3
                 color: $darkColor
+
             &::after
                 background-color: #ffffff
                 background-image: url("https://www.transparenttextures.com/patterns/arches.png")
@@ -344,12 +346,14 @@ span.brand
             @media screen and (max-width: 992px)
                 h3
                     padding-left: 15px!important
+
         &:nth-child(5)
             background: $yellow
             &::after
                 background-color: #ffffff
                 background-image: url("../assets/images/wrapper5.jpg")
                 background-size: cover
+
 
 
 // clients
@@ -502,7 +506,7 @@ span.brand
             position: center
             repeat: no-repeat
         cursor: pointer
-        margin: 0 20px
+
         border-bottom: 4px solid transparent
         opacity: 0.5
         @extend %transition
@@ -515,6 +519,8 @@ span.brand
     .client-controls
         display: none
     .clients-belt
+        .client-unit
+            padding-bottom: 30px
         .client-unit.active-client
             display: block
             position: relative
@@ -543,7 +549,7 @@ span.brand
 
 .about
     position: relative
-    padding: 50px 0px
+    padding-top: 50px
     background-color: $lightColor
     overflow: hidden
     z-index: 1
@@ -614,6 +620,7 @@ span.brand
 
 @media screen and (max-width: 992px)
     .about
+        padding-bottom: 50px
         .big-text-row
             .big-letters
                 span.bigN
@@ -641,7 +648,7 @@ span.brand
 .clients
     padding-top: 1px
     .headline
-        padding: 10px 0px
+        padding: 20px 0px 30px 0px
         .title
             font-size: 30px
             color: $lightColor!important

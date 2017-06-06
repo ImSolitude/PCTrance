@@ -701,7 +701,6 @@ span.brand span {
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
-  margin: 0 20px;
   border-bottom: 4px solid transparent;
   opacity: 0.5;
 }
@@ -714,6 +713,9 @@ span.brand span {
 @media (max-width: 840px) {
   .client-controls {
     display: none;
+  }
+  .clients-belt .client-unit {
+    padding-bottom: 30px;
   }
   .clients-belt .client-unit.active-client {
     display: block;
@@ -746,7 +748,7 @@ span.brand span {
 
 .about {
   position: relative;
-  padding: 50px 0px;
+  padding-top: 50px;
   background-color: #F2F2F2;
   overflow: hidden;
   z-index: 1;
@@ -836,6 +838,9 @@ span.brand span {
 }
 
 @media screen and (max-width: 992px) {
+  .about {
+    padding-bottom: 50px;
+  }
   .about .big-text-row .big-letters span.bigN {
     font-size: 145px;
     line-height: 145px;
@@ -870,7 +875,7 @@ span.brand span {
 }
 
 .clients .headline {
-  padding: 10px 0px;
+  padding: 20px 0px 30px 0px;
 }
 
 .clients .headline .title {
