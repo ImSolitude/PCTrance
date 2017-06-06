@@ -352,7 +352,6 @@ span.brand
                 background-size: cover
 
 
-
 // clients
 .clients
     position: relative
@@ -592,11 +591,15 @@ span.brand
                 padding-top: 17px
             span
                 font-family: 'Montserrat', sans-serif
-                margin-right: 10px
+
                 font-weight: 700
-                font-size: 240px
-                line-height: 240px
-                float: left
+
+                &.bigN
+                    color: $darkColor
+                    margin-right: 10px
+                    float: left
+                    font-size: 240px
+                    line-height: 240px
 
 @media screen and (max-width: 768px)
     .icon
@@ -605,16 +608,46 @@ span.brand
     .about
         .big-text-row
             .big-letters
-                span
+                span.bigN
                     font-size: 90px!important
-                    line-height: 120px!important
+                    line-height: 130px!important
 
 @media screen and (max-width: 992px)
     .about
         .big-text-row
             .big-letters
-                span
+                span.bigN
                     font-size: 145px
                     line-height: 145px
                 p
                     font-size: 20px
+
+// headlines
+.headline
+    text-transform: none
+    font-weight: 700
+    font-family: 'Montserrat', sans-serif
+    .title
+        text-decoration: underline
+        text-decoration-color: $blue
+        text-decoration-skip: ink
+        color: $darkColor
+    .dot
+        font-size: 30px
+        line-height: 0
+        color: $blue
+        text-decoration: none!important
+
+.clients
+    padding-top: 1px
+    .headline
+        padding: 10px 0px
+        .title
+            font-size: 30px
+            color: $lightColor!important
+.big-text-row
+    .headline
+        padding-top: 20px
+        .title
+            font-size: 25px
+            text-decoration: none

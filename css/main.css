@@ -813,11 +813,15 @@ span.brand span {
 
 .about .big-text-row .big-letters span {
   font-family: 'Montserrat', sans-serif;
-  margin-right: 10px;
   font-weight: 700;
+}
+
+.about .big-text-row .big-letters span.bigN {
+  color: #010712;
+  margin-right: 10px;
+  float: left;
   font-size: 240px;
   line-height: 240px;
-  float: left;
 }
 
 @media screen and (max-width: 768px) {
@@ -825,18 +829,60 @@ span.brand span {
     float: left;
     margin: 10px 30px;
   }
-  .about .big-text-row .big-letters span {
+  .about .big-text-row .big-letters span.bigN {
     font-size: 90px !important;
-    line-height: 120px !important;
+    line-height: 130px !important;
   }
 }
 
 @media screen and (max-width: 992px) {
-  .about .big-text-row .big-letters span {
+  .about .big-text-row .big-letters span.bigN {
     font-size: 145px;
     line-height: 145px;
   }
   .about .big-text-row .big-letters p {
     font-size: 20px;
   }
+}
+
+.headline {
+  text-transform: none;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.headline .title {
+  text-decoration: underline;
+  text-decoration-color: #00AFB5;
+  text-decoration-skip: ink;
+  color: #010712;
+}
+
+.headline .dot {
+  font-size: 30px;
+  line-height: 0;
+  color: #00AFB5;
+  text-decoration: none !important;
+}
+
+.clients {
+  padding-top: 1px;
+}
+
+.clients .headline {
+  padding: 10px 0px;
+}
+
+.clients .headline .title {
+  font-size: 30px;
+  color: #F2F2F2 !important;
+}
+
+.big-text-row .headline {
+  padding-top: 20px;
+}
+
+.big-text-row .headline .title {
+  font-size: 25px;
+  text-decoration: none;
 }
