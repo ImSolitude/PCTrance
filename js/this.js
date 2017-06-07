@@ -6,7 +6,7 @@ import $ from 'jquery';
 */
 $(document).ready(function() {
 
-    $('a').on('click', function(e) {
+    $('a:not(.notThis)').on('click', function(e) {
         e.preventDefault();
     });
 
