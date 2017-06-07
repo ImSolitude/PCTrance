@@ -658,3 +658,247 @@ span.brand
         .title
             font-size: 25px
             text-decoration: none
+
+
+
+// Features
+
+.features
+    font-family: 'Montserrat', sans-serif
+    text-transform: none
+    padding: 30px 0px
+    background: $darkColor
+    .container
+        margin-top: 25px
+    .row
+        margin: 0px 30px
+        border: 2px solid $lightColor
+
+    .feature
+        padding: 20px 40px
+        transition: all 0.33s ease
+        cursor: pointer
+        overflow: hidden
+        color: $lightColor
+        height: 200px
+        img
+            filter: brightness(1000) saturate(0) hue-rotate(0)
+        @media screen and (min-width: 1200px)
+            &:not(:first-child)
+                border-left: 1px solid $lightColor
+        @media screen and (max-width: 768px)
+            &:not(:last-child)
+                border-bottom: 1px solid $lightColor
+            &:not(:first-child)
+                border-left: none
+        &:nth-child(n)
+            &:before
+                font-family: "FontAwesome"
+                font-size: 150px
+                opacity: 0
+                color: $darkColor
+                position: absolute
+                left: -15%
+                top: 25%
+                background: url("../assets/images/clients/brand1.svg")
+
+                transition: all 0.33s ease
+        &:nth-child(1)::before
+            content: ""
+            background: url("../assets/images/clients/brand1.svg")
+            width: 100%
+            height: 100%
+            background-size: 200px
+            background-repeat: no-repeat
+            background-position: -50% 150%
+        &:nth-child(2)::before
+            content: ''
+            background: url("../assets/images/clients/brand2.svg")
+            width: 100%
+            height: 100%
+            background-size: 200px
+            background-repeat: no-repeat
+            background-position: -50% 150%
+        &:nth-child(3)::before
+            content: ''
+            background: url("../assets/images/clients/brand3.svg")
+            width: 100%
+            height: 100%
+            background-size: 200px
+            background-repeat: no-repeat
+            background-position: -50% 150%
+        &:nth-child(3)
+            h3
+                margin-top: -10px
+        &:nth-child(4)::before
+            content: ''
+            background: url("../assets/images/clients/brand4.svg")
+            width: 100%
+            height: 100%
+            background-size: 200px
+            background-repeat: no-repeat
+            background-position: -50% 150%
+        &:nth-child(4)
+            h3
+                margin-top: 10px
+        &:hover
+            background: $lightColor
+
+            &::before
+                opacity: 0.1
+                left: -5%
+                top: 15%
+
+        &:hover > *
+            color: $darkColor
+        &:hover > p
+            transform: translateY(-5px)
+        &:hover > h3
+            transform: translateY(-10px)
+        &:hover > img
+            transform: translateY(-10px)
+            opacity: 0
+        *
+            transition: all 0.33s ease
+
+        i
+            font-size: 24px
+        h3
+            margin: 15px 10px 10px 5px
+        p
+            padding: 0px 10px
+            font-size: 12px
+
+    .headline
+        .title
+            color: $lightColor
+
+
+
+// newsletter
+.newsletter
+    .container-fluid
+        padding: 0px 0px 30px 0px
+        background: $lightColor
+        .headline
+            margin-top: 30px
+        input
+            height: 35px
+            margin-top: 10px
+            border: none
+            text-align: center
+            background: $darkColor
+            color: $lightColor
+            width: 300px
+            &::-webkit-input-placeholder
+                color: $lightColor
+                opacity: 0.3
+            &:focus
+                outline: none
+                &::-webkit-input-placeholder
+                    opacity: 0
+                + .round-btn
+                    background: $darkColor
+                    color: $lightColor
+
+        .round-btn
+            text-transform: none
+            padding: 8px
+            height: 35px
+            vertical-align: bottom
+            margin: 10px 0px 0px 0px
+            &::after
+
+                left: 2px
+
+
+
+
+// footer
+.footer
+    font-family: 'Montserrat', sans-serif
+
+    background: $darkColor
+    .container
+        padding: 50px 40px
+    .menu
+
+    ul
+        list-style: none
+        margin: 0px 0px 15px 0px
+        padding: 0
+        font-size: 12px
+        .menu-title
+            text-transform: uppercase
+            letter-spacing: 1px
+            color: $yellow
+            font-weight: 700
+            margin-bottom: 5px
+        li
+            text-transform: none
+            padding: 0.15em 0px
+            a
+                color: $lightColor
+            .round-btn
+                color: $darkColor
+        .social
+
+            a
+                margin-right: 5px
+                i
+                    @extend %transition
+                    font-size: 15px
+                &:hover
+                    i
+                        color: $yellow
+
+    .footer-brand
+        margin-top: 70px
+        [class^='col-']
+            padding: 0
+            margin-bottom: 25px
+
+        .navbar-brand
+            padding: 0px 0px 0px 20px
+            display: inline-block
+            font-size: 2em
+            font-weight: 700
+            color: $lightColor
+            margin: 0px
+        p
+            font-family: 'Montserrat', sans-serif
+            text-transform: none
+            display: inline-block
+            padding-left: 5px
+            line-height: 34px
+            font-size: 12px
+            color: $lightColor
+            opacity: 0.3
+
+        a
+            font-family: 'Montserrat', sans-serif
+            text-transform: none
+            color: $yellow
+            font-size: 12px
+            margin: 0 10px
+            &:hover
+                color: darken($yellow, 10)
+        .social
+            i
+                @extend %transition
+                font-size: 16px
+                &:hover
+                    color: $lightColor
+
+@media screen and (max-width: 1200px)
+    .footer
+        .footer-brand
+            [class^='col-']
+                &.center-md
+                    text-align: center
+            .navbar-brand
+                padding: 0px!important
+                width: 100%!important
+                margin-bottom: -30px
+        p.copyright
+            padding-left: 20px
