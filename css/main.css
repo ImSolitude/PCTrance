@@ -307,7 +307,7 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
   }
 }
 
-#navMenu .navbar-header .navbar-toggle .icon-bar, #navMenu #navContent ul.nav > li > a, .round-btn, .wrapper [class^='col-']:nth-child(n)::after, .client-controls > div, .clients-logos .client-logo, .footer ul .social a i, .footer .footer-brand .social i {
+#navMenu .navbar-header .navbar-toggle .icon-bar, #navMenu #navContent ul.nav > li > a, .round-btn, .wrapper [class^='col-']:nth-child(n)::after, .client-controls > div, .clients-logos .client-logo, .footer ul .social a i, .footer .footer-brand .social i, .myCredit {
   transition: all 0.33s ease;
 }
 
@@ -1203,4 +1203,35 @@ span.brand span {
   .footer p.copyright {
     padding-left: 0px;
   }
+}
+
+@media screen and (max-width: 400px) {
+  .footer .footer-brand a {
+    margin: 0 5px;
+  }
+  .myCredit {
+    display: none;
+  }
+}
+
+.myCredit {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  text-transform: none;
+  padding: 5px 10px;
+  background-color: #010712;
+  color: #F2F2F2;
+  position: fixed;
+  left: 10;
+  bottom: 10px;
+  z-index: 99999;
+  opacity: 0.3;
+}
+
+.myCredit:hover {
+  opacity: 1;
+}
+
+.myCredit a {
+  color: #F2E85C;
 }

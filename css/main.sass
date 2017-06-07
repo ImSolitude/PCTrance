@@ -902,3 +902,31 @@ span.brand
                 margin-bottom: -30px
         p.copyright
             padding-left: 0px
+
+
+@media screen and (max-width: 400px)
+    .footer
+        .footer-brand
+            a
+                margin: 0 5px
+    .myCredit
+        display: none
+
+.myCredit
+    font-family: 'Montserrat', sans-serif
+    font-size: 12px
+
+    text-transform: none
+    padding: 5px 10px
+    background-color: $darkColor
+    color: $lightColor
+    position: fixed
+    left: 10
+    bottom: 10px
+    z-index: 99999
+    @extend %transition
+    opacity: 0.3
+    &:hover
+        opacity: 1
+    a
+        color: $yellow
