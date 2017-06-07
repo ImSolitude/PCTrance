@@ -4,8 +4,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 */
+$(document).ready(function() {
+
+    $('a').on('click', function(e) {
+        e.preventDefault();
+    });
+
+
 $('.client-logo, .clients-mobile-nav span').on('click', function() {
-            console.log('gggg');
+
             var $this = $(this),
                 $siblings = $this.parent().children(),
                 $position = $siblings.index($this);
@@ -42,3 +49,4 @@ $('.client-logo, .clients-mobile-nav span').on('click', function() {
                 }
 
         });
+});
